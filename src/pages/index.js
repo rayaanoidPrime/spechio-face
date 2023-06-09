@@ -23,6 +23,10 @@ export default function Home() {
       fileList : []
   });
 
+  const handleSubmit = () => {
+    console.log(data.fileList)
+  }
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between bg-gray-50 ${inter.className}`}
@@ -36,6 +40,10 @@ export default function Home() {
             Facial Feature extracter and Beauty Product recommendation engine
         </div>
         <FileDrop data={data} dispatch={dispatch} />
+        {data.fileList && data.fileList.length>0 ?
+          <button onClick={handleSubmit} type='submit' className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Submit</button> 
+          : <></> 
+        }
       </div>
       </Layout>      
     </main>
