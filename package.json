@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "ml" : "virtualenv venv && .\\venv\\Scripts\\activate && pip install -r ML\\requirements.txt ",
+    "mldev" : "venv\\Scripts\\Activate.ps1 "
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
