@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "ml" : "virtualenv venv && .\\venv\\Scripts\\activate && pip install -r ML\\requirements.txt ",
+    "ml" : "virtualenv venv && .\\venv\\Scripts\\activate && pip install -r .\\backend\\requirements.txt ",
     "mldev" : "venv\\Scripts\\Activate.ps1 "
   },
   "dependencies": {
