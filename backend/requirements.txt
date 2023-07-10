@@ -1,8 +1,9 @@
 numpy
 pandas
 matplotlib
-sklearn
+scikit-learn
 tensorflow
 opencv-python
 fastapi
 uvicorn[standard]
+python-multipart

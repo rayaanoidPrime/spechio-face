@@ -1,18 +1,14 @@
 import os
-from typing import List
 import numpy as np
-import pandas as pd
 from PIL import Image
 import tensorflow as tf
 from models.skin_tone_model.skin_tone_knn import skin_tone_knn
-import werkzeug
 import base64
 from io import BytesIO
 from PIL import Image
 from fastapi import FastAPI, Form
-from pydantic import BaseModel
 
-class_names = ['Dry_skin', 'Oil_skin']
+class_names = ['Dry_skin', 'Oily_skin']
 
 skin_tone_dataset = 'models/skin_tone_model/skin_tone_dataset.csv'
 
@@ -90,14 +86,17 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.post("/skin_tone/{item_id}")
-def predict(filename: str = Form(...), filedata: str = Form(...)):
+@app.post("/skin")
+async def predict(filename: str = Form(...), filedata: str = Form(...)):
     image_as_bytes = bytes(filedata , encoding="ascii")  # convert string to bytes
     img = Image.open(BytesIO(base64.b64decode(image_as_bytes)))  # decode base64string
     file_path = os.path.join('./static', filename)
     img.save(file_path)
     skin_type = prediction_skin(file_path).split('_')[0]
     tone = skin_tone_knn(file_path, dataset=skin_tone_dataset)
+    print(skin_type)
+    print(tone)
+
     return {'type': skin_type, 'tone': str(tone)}, 200
 
 

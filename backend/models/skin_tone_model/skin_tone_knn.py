@@ -4,7 +4,7 @@ To classify the input skin into one of the 6 skin tones
 import pandas as pd
 import os
 from sklearn.neighbors import KNeighborsClassifier
-from skin_detection import skin_colours
+from models.skin_tone_model.skin_detection import skin_colours
 
 
 def skin_tone_knn(img_path,dataset):

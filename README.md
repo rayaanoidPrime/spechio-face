@@ -12,9 +12,38 @@ Spechio frontend for extracting facial features and recommending beauty products
 	2.       ML model for face features analysis.											
 	3.       Recommend beauty products based on extracted features of the face. (Create a dummy beauty products mapping in the backend)											
 												
+## Getting Started For ML & Backend:
+
+### Localhost deployment : 
+
+1.  Run the command from the root folder to create virtual env.
+
+```bash
+npm run ml 
+```
+
+2.  Activate the venv by running 
+
+```bash
+.\\venv\\Scripts\\activate
+```
+
+3.  Go into the backend folder using 
+
+```bash
+cd .\\backend
+```
+
+4.  Run the uvicorn server using 
+
+```bash
+uvicorn main:app --host localhost --port 8000
+# or 
+uvicorn main:app --host localhost --port 8000 --reload # for development to enable hot reloading with file changes.
+```
 
 
-## Getting Started
+## Getting Started For Frontend:
 
 First, run the development server:
 
