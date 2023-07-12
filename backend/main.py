@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from PIL import Image
-import tensorflow as tf
+import onnxruntime as rt
 from models.skin_tone_model.skin_tone_knn import skin_tone_knn
 import base64
 from io import BytesIO
@@ -16,29 +16,38 @@ app = FastAPI()
 
 def get_model():
     global skin_type_model
-    skin_type_model = tf.keras.models.load_model('./models/skin_type_model')
+    providers = ['CPUExecutionProvider']
+    onnx_model = 'models/skin_type_model/model1.onnx'
+    skin_type_model = rt.InferenceSession(onnx_model, providers=providers)
     print('Skin type model loaded')
 
 
-def load_image(img_path):
-    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(224, 224))
-    # (height, width, channels)
-    img_tensor = tf.keras.preprocessing.image.img_to_array(img)
-    # (1, height, width, channels), add a dimension because the model expects this shape: (batch_size, height, width, channels)
-    img_tensor = np.expand_dims(img_tensor, axis=0)
-    # imshow expects values in the range [0, 1]
-    img_tensor /= 255.
+def load_and_prep(filepath):
+    # Load the image using PIL
+    img = Image.open(filepath)
+    # Resize the image to the target size
+    img_resized = img.resize((224, 224))
+    # Convert the image to a NumPy array
+    img_array = np.array(img_resized)
+    # Add a batch dimension
+    img_tensor = np.expand_dims(img_array, axis=0)
+    # Normalize the image
+    img_tensor = img_tensor.astype(np.float32)
     return img_tensor
 
 def prediction_skin(img_path):
-    new_image = load_image(img_path)
-    pred = skin_type_model.predict(new_image)
+    img_processed = load_and_prep(img_path)
+    class_names = ["Dry_Skin", "Oily_Skin"]
+    output_names = ['output_layer']
+    onnx_pred = skin_type_model.run(output_names, {"input": img_processed})
     # print(pred1)
-    if len(pred[0]) > 1:
-        pred_class1 = class_names[tf.argmax(pred[0])]
-    else:
-        pred_class1 = class_names[int(tf.round(pred[0]))]
-    return pred_class1
+    # if len(pred[0]) > 1:
+    #     pred_class1 = class_names[tf.argmax(pred[0])]
+    # else:
+    #     pred_class1 = class_names[int(tf.round(pred[0]))]
+    # return pred_class1
+    pred_class = class_names[onnx_pred[0][0].argmax()]
+    return pred_class
 
 
 get_model()

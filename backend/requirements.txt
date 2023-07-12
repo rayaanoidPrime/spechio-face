@@ -1,9 +1,9 @@
 numpy
 pandas
-matplotlib
-scikit-learn
-tensorflow
-opencv-python
 fastapi
 uvicorn[standard]
 python-multipart
+Pillow
+onnxruntime
+opencv-python
+scikit-learn

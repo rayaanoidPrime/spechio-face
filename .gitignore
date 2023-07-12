@@ -176,3 +176,6 @@ next-env.d.ts
 
 /venv
 backend/venv
+
+backend/.space
+/backend/__pycache__
