@@ -34,3 +34,29 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.webcam-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.webcam-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.webcam-preview {
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 24px;
+}
+
+.captured-image {
+  max-width: 500
+}

@@ -107,7 +107,9 @@ const FileDrop   = ({data , dispatch}) => {
                     </svg>
                     <label htmlFor="fileSelect" className="text-center border-1 bg-indigo-900 opacity-80 hover:opacity-100 px-3 rounded-xl hover:bg-indigo-600 text-white py-0.5 hover:cursor-pointer">You can select multiple Files</label>
                     <input id="fileSelect" onChange={(e) => handleFileSelect(e)} type="file" multiple className=" absolute top-[-9999px] " />
-                    <p className="mt-1 text-sm text-gray-600">Drag and drop your files here</p>
+                    <p className="mt-1 text-sm text-gray-600">Drag and drop your files here</p> 
+                    <p className="mt-1 text-sm text-gray-600">OR</p> 
+                    <a href="./webcam" className="mt-1 text-sm text-gray-600">Use Webcam</a> 
                 </div>
             </div>
         </div>

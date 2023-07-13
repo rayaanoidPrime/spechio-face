@@ -2,8 +2,44 @@ import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout'
 import FileDrop from "@/components/filedrop";
 import { useReducer } from 'react';
+import axios from 'axios';
+
 
 const inter = Inter({ subsets: ['latin'] })
+
+async function base64EncodeFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    
+    reader.onload = () => {
+      const encodedString = btoa(reader.result);
+      resolve(encodedString);
+    };
+
+    reader.onerror = (error) => {
+      reject(error);
+    };
+
+    reader.readAsBinaryString(file);
+  });
+}
+
+
+async function makePredictPostRequest(filename, filedata) {
+  try {
+    var encodedFile = await base64EncodeFile(filedata)
+    var json = {
+      filename: filename,
+      filedata: encodedFile,
+    }
+    console.log(json)
+    const response = await axios.post('http://localhost:8000/skin', json);
+    console.log(response.data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
 export default function Home() {
 
@@ -24,8 +60,10 @@ export default function Home() {
   });
 
   const handleSubmit = () => {
-    console.log(data.fileList)
+    console.log(data.fileList[0]);
+    makePredictPostRequest(data.fileList[0]["name"], data.fileList[0]);
   }
+
 
   return (
     <main
@@ -45,7 +83,7 @@ export default function Home() {
           : <></> 
         }
       </div>
-      </Layout>      
+      </Layout>
     </main>
   )
 }

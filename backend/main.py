@@ -7,12 +7,27 @@ import base64
 from io import BytesIO
 from PIL import Image
 from fastapi import FastAPI, Form
+from fastapi.middleware.cors import CORSMiddleware
 
 class_names = ['Dry_skin', 'Oily_skin']
 
 skin_tone_dataset = 'models/skin_tone_model/skin_tone_dataset.csv'
 
 app = FastAPI()
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+    "http://localhost:8000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_model():
     global skin_type_model
