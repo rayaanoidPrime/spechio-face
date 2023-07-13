@@ -28,12 +28,15 @@ async function base64EncodeFile(file) {
 async function makePredictPostRequest(filename, filedata) {
   try {
     var encodedFile = await base64EncodeFile(filedata)
-    var json = {
-      filename: filename,
-      filedata: encodedFile,
-    }
-    console.log(json)
-    const response = await axios.post('http://localhost:8000/skin', json);
+    var bodyFormData = new FormData();
+    bodyFormData.append('filename', filename);
+    bodyFormData.append('filedata' , encodedFile);
+    console.log(bodyFormData);
+    const response = await axios.post('http://localhost:8000/skin',bodyFormData,{
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      }
+    });
     console.log(response.data);
   } catch (error) {
     console.error(error);
