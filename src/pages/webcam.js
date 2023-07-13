@@ -26,12 +26,12 @@ const WebcamComponent = () => {
         </div>
         <div className='webcam-container'>
             <div className='webcam-col'>
-            <Webcam  audio={false} ref={webcamRef} screenshotFormat="image/jpeg" className='webcam-preview'/>
-            <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={captureImage}>Capture</button>
+              <Webcam  audio={false} ref={webcamRef} screenshotFormat="image/jpeg" className='webcam-preview'/>
+              <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={captureImage}>Capture</button>
             </div>
             <div className='webcam-col'>
-            {capturedImage && <img className='webcam-preview' src={capturedImage} alt="Captured" />}
-            {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Use</button> : <></>}
+              {capturedImage && <img className='webcam-preview' src={capturedImage} alt="Captured" />}
+              {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Use</button> : <></>}
             </div>
         </div> 
       </div>
