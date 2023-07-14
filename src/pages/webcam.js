@@ -2,15 +2,41 @@ import React, { useRef, useCallback, useState } from 'react';
 import Webcam from 'react-webcam';
 import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout'
+import axios from 'axios';
+
 
 const WebcamComponent = () => {
   const webcamRef = useRef(null);
   const [capturedImage, setCapturedImage] = useState(null);
+  const [imageEncoded, setEncoded] = useState(null);
+  const [skinType, setSkinType] = useState(null);
+  const [skinTone, setSkinTone] = useState(null);
 
   const captureImage = useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setCapturedImage(imageSrc);
+    setEncoded(imageSrc.substring(23, imageSrc.length))
+    console.log(imageSrc.substring(23, imageSrc.length))
   }, []);
+
+  async function makePredictPostRequest() {
+    try {
+      var bodyFormData = new FormData();
+      bodyFormData.append('filename', 'pic.jpeg');
+      bodyFormData.append('filedata' , imageEncoded);
+      console.log(bodyFormData);
+      const response = await axios.post('http://localhost:8000/skin',bodyFormData,{
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        }
+      });
+      console.log(response.data);
+      setSkinType(response.data[0]["type"]);
+      setSkinTone(response.data[0]["tone"]);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   return (
     <main
@@ -31,7 +57,17 @@ const WebcamComponent = () => {
             </div>
             <div className='webcam-col'>
               {capturedImage && <img className='webcam-preview' src={capturedImage} alt="Captured" />}
-              {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Use</button> : <></>}
+              {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
+            </div>
+            <div>
+              {skinType && skinTone ? <div>
+              <p>
+                Your Skin Type is : {skinType} 
+              </p>
+              <p>
+                Your Skin Tone is : {skinTone}
+              </p>
+              </div> : <></>}
             </div>
         </div> 
       </div>

@@ -1,11 +1,15 @@
 import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout'
 import FileDrop from "@/components/filedrop";
-import { useReducer } from 'react';
+import { useReducer, useState } from 'react';
 import axios from 'axios';
 
-
 const inter = Inter({ subsets: ['latin'] })
+
+export default function Home() {
+const [skinType, setSkinType] = useState(null);
+const [skinTone, setSkinTone] = useState(null);
+
 
 async function base64EncodeFile(file) {
   return new Promise((resolve, reject) => {
@@ -25,9 +29,11 @@ async function base64EncodeFile(file) {
 }
 
 
+
 async function makePredictPostRequest(filename, filedata) {
   try {
     var encodedFile = await base64EncodeFile(filedata)
+    console.log(encodedFile)
     var bodyFormData = new FormData();
     bodyFormData.append('filename', filename);
     bodyFormData.append('filedata' , encodedFile);
@@ -38,13 +44,14 @@ async function makePredictPostRequest(filename, filedata) {
       }
     });
     console.log(response.data);
+    setSkinType(response.data[0]["type"]);
+    setSkinTone(response.data[0]["tone"]);
   } catch (error) {
     console.error(error);
   }
 }
 
 
-export default function Home() {
 
   const reducer = (state , action ) => {
     switch (action.type) {
@@ -66,8 +73,6 @@ export default function Home() {
     console.log(data.fileList[0]);
     makePredictPostRequest(data.fileList[0]["name"], data.fileList[0]);
   }
-
-
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between bg-gray-50 ${inter.className}`}
@@ -85,6 +90,16 @@ export default function Home() {
           <button onClick={handleSubmit} type='submit' className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Submit</button> 
           : <></> 
         }
+      </div>
+      <div>
+              {skinType && skinTone ? <div>
+              <p>
+                Your Skin Type is : {skinType} 
+              </p>
+              <p>
+                Your Skin Tone is : {skinTone}
+              </p>
+              </div> : <></>}
       </div>
       </Layout>
     </main>
