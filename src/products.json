@@ -1,0 +1,103 @@
+{
+    "dry": {
+        "1": {
+            "productname": "Cetaphil Daily Hydrating Lotion",
+            "productimg": "src/products/Cetaphil-Daily-Hydrating-Lotion.jpg",
+            "price": 550,
+            "brand": "Cetaphil",
+            "itemform": "Lotion",
+            "scent": "Fragrance-Free"
+        },
+        "2": {
+            "productname": "Neutrogena Hydro Boost Gel Cream",
+            "productimg": "src/products/Neutrogena_Hydro_Boost_Gel_Cream.jpg",
+            "price": 699,
+            "brand": "Neutrogena",
+            "itemform": "Gel Cream",
+            "scent": "Fragrance-Free"
+        },
+        "3": {
+            "productname": "Aveeno Daily Moisturizing Lotion",
+            "productimg": "src/products/Aveeno_Daily_Moisturizing_Lotion.jpg",
+            "price": 399,
+            "brand": "Aveeno",
+            "itemform": "Lotion",
+            "scent": "Lightly Fragranced"
+        },
+        "4": {
+            "productname": "CeraVe Moisturizing Cream",
+            "productimg": "src/products/cerave-moisturizing-cream-daily-face-and-body-moisturizer-19-ounce-.jpg",
+            "price": 799,
+            "brand": "CeraVe",
+            "itemform": "Cream",
+            "scent": "Unscented"
+        },
+        "5": {
+            "productname": "The Body Shop Vitamin E Moisture Cream",
+            "productimg": "src/products/the_body_shop_vitamin_e_moisture_cream_.jpg",
+            "price": 1095,
+            "brand": "The Body Shop",
+            "itemform": "Cream",
+            "scent": "Subtle Fragrance"
+        },
+        "6": {
+            "productname": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+            "productimg": "src/products/La Roche-Posay_Toleriane_Double_Repair_Face_Moisturizer.jpg",
+            "price": 1550,
+            "brand": "La Roche-Posay",
+            "itemform": "Lotion",
+            "scent": "Fragrance-Free"
+        }
+    },
+    "oily": {
+        "1": {
+            "productname": "Cetaphil DermaControl Oil Absorbing Moisturizer",
+            "productimg": "src/products/635d305f11cc340c5d413846-cetaphil-pro-dermacontrol-oil-absorbing.jpg",
+            "price": 799,
+            "brand": "Cetaphil",
+            "itemform": "Lotion",
+            "scent": "Fragrance-Free"
+        },
+        "2": {
+            "productname": "Neutrogena Oil-Free Moisturizer",
+            "productimg": "src/products/Neutrogena-Oil-Free-Moisturizer.jpg",
+            "price": 499,
+            "brand": "Neutrogena",
+            "itemform": "Lotion",
+            "scent": "Fragrance-Free"
+        },
+        "3": {
+            "productname": "Lotus Herbals Alphamoist Alpha Hydroxy Skin Renewal Oil-Free Moisturizer",
+            "productimg": "src/products/Lotus-Herbals-Oil-Free-Moisturizer.jpg",
+            "price": 275,
+            "brand": "Lotus Herbals",
+            "itemform": "Lotion",
+            "scent": "Refreshing"
+        },
+        "4": {
+            "productname": "Plum Green Tea Mattifying Moisturizer",
+            "productimg": "src/products/Plum-green_tea.jpg",
+            "price": 470,
+            "brand": "Plum",
+            "itemform": "Cream",
+            "scent": "Green Tea"
+        },
+        "5": {
+            "productname": "L'Oreal Paris Hydra Fresh Anti-Shine Aqua Gel",
+            "productimg": "src/products/Loreal.jpg",
+            "price": 599,
+            "brand": "L'Oreal Paris",
+            "itemform": "Gel",
+            "scent": "Fresh"
+        },
+        "6": {
+            "productname": "Kiehl's Ultra Facial Oil-Free Gel Cream",
+            "productimg": "src/products/Keiths-oil-free.jpg",
+            "price": 2450,
+            "brand": "Kiehl's",
+            "itemform": "Gel Cream",
+            "scent": "Fragrance-Free"
+        }
+    }
+  }
+  
