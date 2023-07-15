@@ -1,103 +1,115 @@
 {
     "dry": {
-        "1": {
-            "productname": "Cetaphil Daily Hydrating Lotion",
-            "productimg": "products/Cetaphil-Daily-Hydrating-Lotion.jpg",
-            "price": 550,
-            "brand": "Cetaphil",
-            "itemform": "Lotion",
-            "scent": "Fragrance-Free"
-        },
-        "2": {
-            "productname": "Neutrogena Hydro Boost Gel Cream",
-            "productimg": "products/Neutrogena_Hydro_Boost_Gel_Cream.jpg",
-            "price": 699,
-            "brand": "Neutrogena",
-            "itemform": "Gel Cream",
-            "scent": "Fragrance-Free"
-        },
-        "3": {
-            "productname": "Aveeno Daily Moisturizing Lotion",
-            "productimg": "products/Aveeno_Daily_Moisturizing_Lotion.jpg",
-            "price": 399,
-            "brand": "Aveeno",
-            "itemform": "Lotion",
-            "scent": "Lightly Fragranced"
-        },
-        "4": {
-            "productname": "CeraVe Moisturizing Cream",
-            "productimg": "products/cerave-moisturizing-cream-daily-face-and-body-moisturizer-19-ounce-.jpg",
-            "price": 799,
-            "brand": "CeraVe",
-            "itemform": "Cream",
-            "scent": "Unscented"
-        },
-        "5": {
-            "productname": "The Body Shop Vitamin E Moisture Cream",
-            "productimg": "products/the_body_shop_vitamin_e_moisture_cream_.jpg",
-            "price": 1095,
-            "brand": "The Body Shop",
-            "itemform": "Cream",
-            "scent": "Subtle Fragrance"
-        },
-        "6": {
-            "productname": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
-            "productimg": "products/La Roche-Posay_Toleriane_Double_Repair_Face_Moisturizer.jpg",
-            "price": 1550,
-            "brand": "La Roche-Posay",
-            "itemform": "Lotion",
-            "scent": "Fragrance-Free"
-        }
+      "1": {
+        "productname": "Cetaphil Daily Hydrating Lotion",
+        "productimg": "products/Cetaphil-Daily-Hydrating-Lotion.jpg",
+        "price": 550,
+        "brand": "Cetaphil",
+        "itemform": "Lotion",
+        "scent": "Fragrance-Free",
+        "description": "Cetaphil Daily Hydrating Lotion provides long-lasting hydration for dry skin. It is a lightweight, non-greasy formula that keeps your skin moisturized and nourished throughout the day."
+      },
+      "2": {
+        "productname": "Neutrogena Hydro Boost Gel Cream",
+        "productimg": "products/Neutrogena_Hydro_Boost_Gel_Cream.jpg",
+        "price": 699,
+        "brand": "Neutrogena",
+        "itemform": "Gel Cream",
+        "scent": "Fragrance-Free",
+        "description": "Neutrogena Hydro Boost Gel Cream is a refreshing and lightweight moisturizer that instantly hydrates dry skin. The unique gel formula locks in moisture, leaving your skin smooth, supple, and hydrated."
+      },
+      "3": {
+        "productname": "Aveeno Daily Moisturizing Lotion",
+        "productimg": "products/Aveeno_Daily_Moisturizing_Lotion.jpg",
+        "price": 399,
+        "brand": "Aveeno",
+        "itemform": "Lotion",
+        "scent": "Lightly Fragranced",
+        "description": "Aveeno Daily Moisturizing Lotion is a nourishing and non-greasy formula that helps to relieve dry skin. It contains natural oatmeal and rich emollients that soothe and moisturize your skin, keeping it healthy and soft."
+      },
+      "4": {
+        "productname": "CeraVe Moisturizing Cream",
+        "productimg": "products/cerave-moisturizing-cream-daily-face-and-body-moisturizer-19-ounce-.jpg",
+        "price": 799,
+        "brand": "CeraVe",
+        "itemform": "Cream",
+        "scent": "Unscented",
+        "description": "CeraVe Moisturizing Cream is a rich and non-greasy formula that provides intense hydration for dry skin. It contains essential ceramides and hyaluronic acid to restore the skin's natural moisture barrier and keep it hydrated throughout the day."
+      },
+      "5": {
+        "productname": "The Body Shop Vitamin E Moisture Cream",
+        "productimg": "products/the_body_shop_vitamin_e_moisture_cream_.jpg",
+        "price": 1095,
+        "brand": "The Body Shop",
+        "itemform": "Cream",
+        "scent": "Subtle Fragrance",
+        "description": "The Body Shop Vitamin E Moisture Cream is a lightweight and easily absorbed moisturizer that replenishes dry skin. Enriched with vitamin E, it nourishes and protects the skin, leaving it feeling soft, smooth, and hydrated."
+      },
+      "6": {
+        "productname": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+        "productimg": "products/La Roche-Posay_Toleriane_Double_Repair_Face_Moisturizer.jpg",
+        "price": 1550,
+        "brand": "La Roche-Posay",
+        "itemform": "Lotion",
+        "scent": "Fragrance-Free",
+        "description": "La Roche-Posay Toleriane Double Repair Face Moisturizer is a lightweight and oil-free moisturizer that provides long-lasting hydration for dry skin. It helps to restore the skin's natural protective barrier and soothes dryness and tightness."
+      }
     },
     "oily": {
-        "1": {
-            "productname": "Cetaphil DermaControl Oil Absorbing Moisturizer",
-            "productimg": "products/635d305f11cc340c5d413846-cetaphil-pro-dermacontrol-oil-absorbing.jpg",
-            "price": 799,
-            "brand": "Cetaphil",
-            "itemform": "Lotion",
-            "scent": "Fragrance-Free"
-        },
-        "2": {
-            "productname": "Neutrogena Oil-Free Moisturizer",
-            "productimg": "products/Neutrogena-Oil-Free-Moisturizer.jpg",
-            "price": 499,
-            "brand": "Neutrogena",
-            "itemform": "Lotion",
-            "scent": "Fragrance-Free"
-        },
-        "3": {
-            "productname": "Lotus Herbals Alphamoist Alpha Hydroxy Skin Renewal Oil-Free Moisturizer",
-            "productimg": "products/Lotus-Herbals-Oil-Free-Moisturizer.jpg",
-            "price": 275,
-            "brand": "Lotus Herbals",
-            "itemform": "Lotion",
-            "scent": "Refreshing"
-        },
-        "4": {
-            "productname": "Plum Green Tea Mattifying Moisturizer",
-            "productimg": "products/Plum-green_tea.jpg",
-            "price": 470,
-            "brand": "Plum",
-            "itemform": "Cream",
-            "scent": "Green Tea"
-        },
-        "5": {
-            "productname": "L'Oreal Paris Hydra Fresh Anti-Shine Aqua Gel",
-            "productimg": "products/Loreal.jpg",
-            "price": 599,
-            "brand": "L'Oreal Paris",
-            "itemform": "Gel",
-            "scent": "Fresh"
-        },
-        "6": {
-            "productname": "Kiehl's Ultra Facial Oil-Free Gel Cream",
-            "productimg": "products/Keiths-oil-free.jpg",
-            "price": 2450,
-            "brand": "Kiehl's",
-            "itemform": "Gel Cream",
-            "scent": "Fragrance-Free"
-        }
+      "1": {
+        "productname": "Cetaphil DermaControl Oil Absorbing Moisturizer",
+        "productimg": "products/635d305f11cc340c5d413846-cetaphil-pro-dermacontrol-oil-absorbing.jpg",
+        "price": 799,
+        "brand": "Cetaphil",
+        "itemform": "Lotion",
+        "scent": "Fragrance-Free",
+        "description": "Cetaphil DermaControl Oil Absorbing Moisturizer is a lightweight and non-greasy formula that helps to control oil and shine. It moisturizes the skin without clogging pores, leaving it matte and shine-free."
+      },
+      "2": {
+        "productname": "Neutrogena Oil-Free Moisturizer",
+        "productimg": "products/Neutrogena-Oil-Free-Moisturizer.jpg",
+        "price": 499,
+        "brand": "Neutrogena",
+        "itemform": "Lotion",
+        "scent": "Fragrance-Free",
+        "description": "Neutrogena Oil-Free Moisturizer is a lightweight and oil-free formula that provides moisturization without leaving a greasy residue. It absorbs quickly into the skin and helps to control excess oil, leaving your skin soft and refreshed."
+      },
+      "3": {
+        "productname": "Lotus Herbals Alphamoist Alpha Hydroxy Skin Renewal Oil-Free Moisturizer",
+        "productimg": "products/Lotus-Herbals-Oil-Free-Moisturizer.jpg",
+        "price": 275,
+        "brand": "Lotus Herbals",
+        "itemform": "Lotion",
+        "scent": "Refreshing",
+        "description": "Lotus Herbals Alphamoist Alpha Hydroxy Skin Renewal Oil-Free Moisturizer is enriched with natural ingredients and alpha hydroxy acids that help to renew and revitalize oily skin. It controls excess oil and provides hydration without clogging pores."
+      },
+      "4": {
+        "productname": "Plum Green Tea Mattifying Moisturizer",
+        "productimg": "products/Plum-green_tea.jpg",
+        "price": 470,
+        "brand": "Plum",
+        "itemform": "Cream",
+        "scent": "Green Tea",
+        "description": "Plum Green Tea Mattifying Moisturizer is a lightweight and mattifying formula specially designed for oily and acne-prone skin. It contains green tea extracts that help to control oil, reduce blemishes, and provide a non-greasy matte finish."
+      },
+      "5": {
+        "productname": "L'Oreal Paris Hydra Fresh Anti-Shine Aqua Gel",
+        "productimg": "products/Loreal.jpg",
+        "price": 599,
+        "brand": "L'Oreal Paris",
+        "itemform": "Gel",
+        "scent": "Fresh",
+        "description": "L'Oreal Paris Hydra Fresh Anti-Shine Aqua Gel is a refreshing and oil-free moisturizer that provides hydration without leaving a greasy residue. It controls shine and leaves your skin feeling fresh and comfortable all day long."
+      },
+      "6": {
+        "productname": "Kiehl's Ultra Facial Oil-Free Gel Cream",
+        "productimg": "products/Keiths-oil-free.jpg",
+        "price": 2450,
+        "brand": "Kiehl's",
+        "itemform": "Gel Cream",
+        "scent": "Fragrance-Free",
+        "description": "Kiehl's Ultra Facial Oil-Free Gel Cream is a lightweight and oil-free moisturizer that provides long-lasting hydration without clogging pores. It helps to control shine and keeps your skin balanced and refreshed."
+      }
     }
   }
   

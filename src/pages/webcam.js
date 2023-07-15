@@ -70,10 +70,13 @@ const WebcamComponent = () => {
         </div>}
         <div className='text-purple-900 text-lg font-bold mt-2 center above'>
         {skinType && skinTone ? <div>
-              <p className='center'>
-                Skin Type : {skinType} 
-              </p>
+              <div className=' border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 flex flex-col rounded-lg p-4 mb-5'>
+              <h2 className='text-xl font-bold mb-4 text-quad self-start'>Your Skin </h2>
+                <p className=''>
+                  Skin Type : {skinType} 
+                </p>
               <SkinToneColor skinTone={skinTone} />
+              </div>
               <ProductRecommendation skinType={skinType} skinTone={skinTone} />
               <button onClick={goBack} type='submit' className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Go Back</button>
               </div> : <></>}
