@@ -98,8 +98,8 @@ async function goBack(){
         }
       </div>
       <div className='text-purple-900 text-lg font-bold mt-2 center above z-10'>
-              {skinType && skinTone ? <div>
-                <div className=' border-1 shadow-xl border-gray-400 bg-gray-100  flex flex-col rounded-lg p-4 mb-5'>
+              {skinType && skinTone ? <div className='z-10'>
+                <div className=' border-1 shadow-xl bg-gray-100 bg-opacity-40 border-gray-400 bg-gray-100  flex flex-col rounded-lg p-4 mb-5'>
               <h2 className='text-xl font-bold mb-4 text-quad self-start'>Your Skin </h2>
                 <p className=''>
                   Skin Type : {skinType} 
