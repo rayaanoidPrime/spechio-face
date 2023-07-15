@@ -109,7 +109,7 @@ const FileDrop   = ({data , dispatch}) => {
                     <input id="fileSelect" onChange={(e) => handleFileSelect(e)} type="file" multiple className=" absolute top-[-9999px] " />
                     <p className="mt-1 text-sm text-gray-600">Drag and drop your files here</p> 
                     <p className="mt-1 text-sm text-gray-600">OR</p> 
-                    <a href="./webcam" className="mt-1 text-sm text-gray-600">Use Webcam</a> 
+                    <a href="./" className="mt-1 text-sm text-gray-600">Use Webcam</a> 
                 </div>
             </div>
         </div>
