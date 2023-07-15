@@ -61,3 +61,17 @@ body {
 .captured-image {
   max-width: 500
 }
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.mright{
+  margin-right: 24px;
+}
+
+.above{
+  z-index: 10;
+}

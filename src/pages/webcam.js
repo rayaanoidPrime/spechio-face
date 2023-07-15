@@ -1,8 +1,10 @@
 import React, { useRef, useCallback, useState } from 'react';
 import Webcam from 'react-webcam';
-import { Inter } from 'next/font/google'
 import { Layout } from '@/components/layout'
 import axios from 'axios';
+import SkinToneColor from '@/components/skin_tone';
+import ProductRecommendation from '@/components/product_recommendation'
+
 
 
 const WebcamComponent = () => {
@@ -38,6 +40,12 @@ const WebcamComponent = () => {
     }
   }
 
+  async function goBack(){
+    setSkinTone(null);
+    setSkinType(null);
+  }
+  
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between bg-gray-50`}
@@ -50,7 +58,7 @@ const WebcamComponent = () => {
         <div className='text-purple-900 text-lg font-bold mt-2'>
             Facial Feature extracter and Beauty Product recommendation engine
         </div>
-        <div className='webcam-container'>
+        {skinTone && skinType ? <></> : <div className='webcam-container'>
             <div className='webcam-col'>
               <Webcam  audio={false} ref={webcamRef} screenshotFormat="image/jpeg" className='webcam-preview'/>
               <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={captureImage}>Capture</button>
@@ -59,17 +67,17 @@ const WebcamComponent = () => {
               {capturedImage && <img className='webcam-preview' src={capturedImage} alt="Captured" />}
               {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
             </div>
-            <div>
-              {skinType && skinTone ? <div>
-              <p>
-                Your Skin Type is : {skinType} 
+        </div>}
+        <div className='text-purple-900 text-lg font-bold mt-2 center above'>
+        {skinType && skinTone ? <div>
+              <p className='center'>
+                Skin Type : {skinType} 
               </p>
-              <p>
-                Your Skin Tone is : {skinTone}
-              </p>
+              <SkinToneColor skinTone={skinTone} />
+              <ProductRecommendation skinType={skinType} skinTone={skinTone} />
+              <button onClick={goBack} type='submit' className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl'>Go Back</button>
               </div> : <></>}
-            </div>
-        </div> 
+      </div>
       </div>
       </Layout>      
     </main>
