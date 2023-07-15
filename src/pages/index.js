@@ -61,14 +61,20 @@ const WebcamComponent = () => {
         {skinTone && skinType ? <></> : <div className='webcam-container'>
             <div className='webcam-col'>
               <Webcam  audio={false} ref={webcamRef} screenshotFormat="image/jpeg" className='webcam-preview'/>
-              <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={captureImage}>Capture</button>
+              <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-100 opacity-90 mt-2 shadow-xl' onClick={captureImage}>Capture</button>
             </div>
             <div className='webcam-col'>
               {capturedImage && <img className='webcam-preview' src={capturedImage} alt="Captured" />}
-              {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
+              {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-2 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
             </div>
         </div>}
-        <a href="./upload" className="text-purple-900 text-lg font-bold mt-2">Upload Image</a> 
+        {skinType && skinTone ? <></> : 
+          <>
+            <p className="text-purple-900 text-lg font-bold mt-2">OR</p>
+            <a href="./upload" className="rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 text-lg hover:opacity-100 opacity-90 font-bold mt-2 shadow-lg">Upload Image</a> 
+          </>
+        }
+       
         <div className='text-purple-900 text-lg font-bold mt-2 center above'>
         {skinType && skinTone ? <div>
               <div className=' border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 flex flex-col rounded-lg p-4 mb-5'>
