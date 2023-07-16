@@ -15,7 +15,7 @@ const ProductRecommendation = ({ skinType, skinTone }) => {
 
   return (
     <div>
-      <div className='center items-center border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 rounded-lg p-4 h-3/4 flex flex-col justify-center max-w-3xl'>
+      <div className='center items-center border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 rounded-lg p-4 h-auto flex flex-col justify-center max-w-3xl'>
       <h2 className='text-xl font-bold mb-4 text-quad self-start'>Recommended Product For You</h2>
         <div className='flex'>
         <div key={products.key} className='mright flex flex-col gap-1'>
@@ -38,7 +38,7 @@ const ProductRecommendation = ({ skinType, skinTone }) => {
               {products.price}
             </p>
             <a href={products.amazonLink} className='text-blue-600 hover:underline'>
-            <button className='px-2 bg-gradient-to-r from-sec to-prim opacity-50 hover:opacity-80 shadow-xl text-white rounded'>
+            <button className='px-2 bg-gradient-to-r from-sec to-prim opacity-60 hover:opacity-80 shadow-xl text-white rounded'>
               Buy Now
             </button>
           </a>
@@ -47,7 +47,7 @@ const ProductRecommendation = ({ skinType, skinTone }) => {
         <Image
             src={'/'+products.productimg}
             alt="Image Description"
-            width={200}
+            width={150}
             height={200}
          />
         </div>
