@@ -75,3 +75,12 @@ body {
 .above{
   z-index: 10;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.relative:hover .tooltip {
+  opacity: 1;
+}

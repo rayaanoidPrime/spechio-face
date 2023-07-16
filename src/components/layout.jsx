@@ -3,7 +3,7 @@ import React from "react";
 export const Layout = ({children}) => {
     return (
         <div
-            className=" absolute h-screen w-full flex items-center justify-center "
+            className=" absolute h-screen w-full flex items-center bg-white justify-center top-0"
         >
             <div className=" absolute space-y-4 m-8">
                 {children}
