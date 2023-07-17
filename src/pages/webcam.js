@@ -68,6 +68,14 @@ const WebcamComponent = () => {
               {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
             </div>
         </div>}
+        <div className='webcam-col'>
+              <p className='text-gray-600 font-semibold'>
+                OR  
+              </p>
+              <a href='./upload' className='text-xl font-bold mb-4 text-quad self-start'>
+                Upload Image
+              </a>
+            </div>
         <div className='text-purple-900 text-lg font-bold mt-2 center above'>
         {skinType && skinTone ? <div>
               <div className=' border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 flex flex-col rounded-lg p-4 mb-5'>
