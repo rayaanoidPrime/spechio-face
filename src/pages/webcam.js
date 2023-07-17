@@ -68,19 +68,24 @@ const WebcamComponent = () => {
               {capturedImage ? <button className='rounded-2xl bg-gradient-to-r from-pent to-quad p-2 px-4 border-2 hover:opacity-80 mt-10 shadow-xl' onClick={makePredictPostRequest}>Use</button> : <></>}
             </div>
         </div>}
-        <a href="./upload" className="text-purple-900 text-lg font-bold mt-2">Upload Image</a> 
         <div className='text-purple-900 text-lg font-bold mt-2 center above'>
         {skinType && skinTone ? <div>
               <div className=' border-1 shadow-xl border-gray-400 bg-gray-100 bg-opacity-40 flex flex-col rounded-lg p-4 mb-5'>
               <h2 className='text-xl font-bold mb-4 text-quad self-start'>Your Skin </h2>
-              <div className='flex gap-10'>
+              <div className='flex gap-28'>
                   <p className=''>
                     Skin Type : {skinType} 
                   </p>
                   <p>
                     Acne Concern : {skinType == "Dry" ? "Low" : "High"}
                   </p>
-                </div>
+                  <p>
+                    Sensitivity : {skinType == "Dry" ? "Low" : "High"}
+                  </p>
+              </div>
+              <p>
+                  Recommended : {skinType == "Dry" ? "Hydrating products with hyaluronic acid, glycerin, and ceramides" : "Oil absorbing products with retinol, glycolic acid"}
+              </p>
               <SkinToneColor skinTone={skinTone} />
               </div>
               <ProductRecommendation skinType={skinType} skinTone={skinTone} />

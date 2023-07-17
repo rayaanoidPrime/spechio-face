@@ -108,7 +108,13 @@ async function goBack(){
                   <p>
                     Acne Concern : {skinType == "Dry" ? "Low" : "High"}
                   </p>
+                  <p>
+                    Sensitivity : {skinType == "Dry" ? "Low" : "High"}
+                  </p>
                 </div>
+              <p>
+                  Recommended : {skinType == "Dry" ? "Hydrating products with hyaluronic acid, glycerin, and ceramides" : "High"}
+              </p>
               <SkinToneColor skinTone={skinTone} />
               </div>
               <ProductRecommendation skinType={skinType} skinTone={skinTone} />
