@@ -101,9 +101,14 @@ async function goBack(){
               {skinType && skinTone ? <div className='z-10'>
                 <div className=' border-1 shadow-xl bg-gray-100 bg-opacity-40 border-gray-400 bg-gray-100  flex flex-col rounded-lg p-4 mb-5'>
               <h2 className='text-xl font-bold mb-4 text-quad self-start'>Your Skin </h2>
-                <p className=''>
-                  Skin Type : {skinType} 
-                </p>
+                <div className='flex gap-10'>
+                  <p className=''>
+                    Skin Type : {skinType} 
+                  </p>
+                  <p>
+                    Acne Concern : {skinType == "Dry" ? "Low" : "High"}
+                  </p>
+                </div>
               <SkinToneColor skinTone={skinTone} />
               </div>
               <ProductRecommendation skinType={skinType} skinTone={skinTone} />
