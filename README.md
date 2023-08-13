@@ -13,8 +13,6 @@ Spechio frontend for extracting facial features and recommending beauty products
 	3.       Recommend beauty products based on extracted features of the face. (Create a dummy beauty products mapping in the backend)											
 
 
-## Chrome Extension Dev :
-https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/
 
 ## Getting Started For ML & Backend:
 
